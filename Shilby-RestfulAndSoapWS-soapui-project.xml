@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="3e5e4195-b6c4-4752-a500-75d42d9a7764" activeEnvironment="Default" name="Shilby_RestfulAndSoapWS" soapui-version="5.7.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+   <con:settings>
+       <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local">
+           <![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config"><con:entry key="Report Format(s)" value=""/><con:entry key="Host:Port" value=""/><con:entry key="Export JUnit Results" value="false"/><con:entry key="Export All" value="false"/><con:entry key="Save After" value="false"/><con:entry key="Add Settings" value="false"/><con:entry key="WSS Password Type" value=""/><con:entry key="TestSuite" value="Posts_TS"/><con:entry key="Endpoint" value=""/><con:entry key="Select Report Type" value=""/><con:entry key="System Properties" value=""/><con:entry key="Password" value=""/><con:entry key="Print Report" value="false"/><con:entry key="Open Report" value="false"/><con:entry key="Export JUnit Results with test properties" value="false"/><con:entry key="Global Properties" value=""/><con:entry key="Project Properties" value=""/><con:entry key="Project Password" value=""/><con:entry key="TestCase" value="&lt;all>"/><con:entry key="Username" value=""/><con:entry key="user-settings.xml Password" value=""/><con:entry key="TestRunner Path" value=""/><con:entry key="Environment" value="Default"/><con:entry key="Coverage Report" value="false"/><con:entry key="Enable UI" value="false"/><con:entry key="Root Folder" value=""/><con:entry key="Ignore Errors" value="false"/><con:entry key="Domain" value=""/><con:entry key="Tool Args" value=""/><con:entry key="Save Project" value="false"/></xml-fragment>]]>
+       </con:setting>
+   </con:settings>
+   <con:interface xsi:type="con:RestService" id="4165fbc8-aae6-4b5f-bd9f-067890d6cb00" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://jsonplaceholder.typicode.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+       <con:settings/>
+       <con:definitionCache type="TEXT" rootPart=""/>
+       <con:endpoints>
+           <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+       </con:endpoints>
+       <con:resource name="Posts" path="/posts" id="c99e154f-9f46-4d20-a006-80f624f1c206">
+           <con:settings/>
+           <con:parameters/>
+           <con:method name="Posts 1" id="ea7fad76-e7a9-4dcf-bf86-6a84c798cece" method="GET">
+               <con:settings/>
+               <con:parameters/>
+               <con:representation type="RESPONSE">
+                   <con:mediaType>application/json; charset=utf-8</con:mediaType>
+                   <con:status>200</con:status>
+                   <con:params/>
+                   <con:element>Response</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                   <con:mediaType xsi:nil="true"/>
+                   <con:status>0</con:status>
+                   <con:params/>
+                   <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                   <con:mediaType xsi:nil="true"/>
+                   <con:status>0</con:status>
+                   <con:params/>
+                   <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                   <con:mediaType xsi:nil="true"/>
+                   <con:status>0</con:status>
+                   <con:params/>
+                   <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                   <con:mediaType xsi:nil="true"/>
+                   <con:status>0</con:status>
+                   <con:params/>
+                   <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                   <con:mediaType xsi:nil="true"/>
+                   <con:status>0</con:status>
+                   <con:params/>
+                   <con:element>data</con:element>
+               </con:representation>
+               <con:representation type="RESPONSE">
+                   <con:mediaType xsi:nil="true"/>
+                   <con:status>0</con:status>
+                   <con:params/>
+                   <con:element>data</con:element>
+               </con:representation>
+               <con:request name="Request 1" id="bb869a09-dc14-4f16-b55e-4734a6186537" mediaType="application/json">
+                   <con:settings>
+                       <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                   </con:setting>
+               </con:settings>
+               <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://jsonplaceholder.typicode.com/posts</con:originalUri>
+               <con:credentials>
+                   <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+           </con:request>
+       </con:method>
+   </con:resource>
+</con:interface>
+<con:testSuite id="b2951401-1a68-42f6-b2e8-d74f3172e94f" name="Posts_TS">
+   <con:description>TestSuite generated for REST Service [https://jsonplaceholder.typicode.com]</con:description>
+   <con:settings/>
+   <con:runType>SEQUENTIAL</con:runType>
+   <con:testCase id="6b983fdb-402e-47da-b7a7-128c13e386b6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Posts_TestCase" searchProperties="true">
+       <con:description>TestCase generated for REST Resource [Posts] located at [/posts]</con:description>
+       <con:settings/>
+       <con:testStep type="restrequest" name="Request 1" id="ea53af76-7167-40ef-843d-7876282a134b">
+           <con:settings/>
+           <con:config service="https://jsonplaceholder.typicode.com" resourcePath="/posts" methodName="Posts 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <con:restRequest name="Request 1" id="bb869a09-dc14-4f16-b55e-4734a6186537" mediaType="application/json">
+                   <con:settings>
+                       <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                   </con:setting>
+               </con:settings>
+               <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://jsonplaceholder.typicode.com/posts</con:originalUri>
+               <con:assertion type="Response SLA Assertion" id="2963994d-f485-411c-8698-16cc1a4b0ec9" name="Response SLA">
+                   <con:configuration>
+                       <SLA>50000</SLA>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="Sensitive Information Exposure" id="67c63aef-e90a-4586-b5c6-6860b05c6316" name="Sensitive Information Exposure">
+                   <con:configuration>
+                       <AssertionSpecificExposureList>~(?s).*Runtime (E|e)rror\s.*###Can give hacker information about the project</AssertionSpecificExposureList>
+                       <IncludeProjectSpecific>true</IncludeProjectSpecific>
+                       <IncludeGlobal>true</IncludeGlobal>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="Simple Contains" id="b8f1648a-7820-402d-aa95-908ccfb61637" name="Contains">
+                   <con:configuration>
+                       <token>"userId": 1</token>
+                       <ignoreCase>false</ignoreCase>
+                       <useRegEx>false</useRegEx>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="JsonPath Count" id="3ed01186-0de6-4720-ba16-be23382751c0" name="JsonPath Count">
+                   <con:configuration>
+                       <path>$[*]</path>
+                       <content>100</content>
+                       <allowWildcards>false</allowWildcards>
+                       <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                       <ignoreComments>false</ignoreComments>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="JsonPath Match" id="2f835a74-2f2d-45b2-aaa2-f217834d955b" name="JsonPath Match">
+                   <con:configuration>
+                       <path>$[0].title</path>
+                       <content>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</content>
+                       <allowWildcards>false</allowWildcards>
+                       <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                       <ignoreComments>false</ignoreComments>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="Schema Compliance" id="b66a6ebe-220e-4382-9f8a-c2b865757386" name="Schema Compliance">
+                   <con:configuration/>
+               </con:assertion>
+               <con:assertion type="Valid HTTP Status Codes" id="ab4768a6-c9bd-4127-aa25-db5d129f3430" name="Valid HTTP Status Codes">
+                   <con:configuration>
+                       <codes>200</codes>
+                   </con:configuration>
+               </con:assertion>
+               <con:credentials>
+                   <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+           </con:restRequest>
+       </con:config>
+   </con:testStep>
+   <con:properties/>
+</con:testCase>
+<con:properties/>
+</con:testSuite>
+<con:testSuite id="62e2cb33-8f2b-461e-b518-8faffe134acf" name="Posts_TS_Groovy">
+   <con:description>TestSuite generated for REST Service [https://jsonplaceholder.typicode.com]</con:description>
+   <con:settings/>
+   <con:runType>SEQUENTIAL</con:runType>
+   <con:testCase id="9ba3fc38-1fee-47ae-8a0d-d731e9c61635" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Posts_TestCase" searchProperties="true">
+       <con:description>TestCase generated for REST Resource [Posts] located at [/posts]</con:description>
+       <con:settings/>
+       <con:testStep type="restrequest" name="Request_1" id="0b198f31-57b6-452b-adad-3c430d5f3210">
+           <con:settings/>
+           <con:config service="https://jsonplaceholder.typicode.com" resourcePath="/posts" methodName="Posts 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+               <con:restRequest name="Request_1" id="bb869a09-dc14-4f16-b55e-4734a6186537" mediaType="application/json">
+                   <con:settings>
+                       <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
+                   </con:setting>
+               </con:settings>
+               <con:endpoint>https://jsonplaceholder.typicode.com</con:endpoint>
+               <con:request/>
+               <con:originalUri>https://jsonplaceholder.typicode.com/posts</con:originalUri>
+               <con:assertion type="Response SLA Assertion" id="2963994d-f485-411c-8698-16cc1a4b0ec9" name="Response SLA">
+                   <con:configuration>
+                       <SLA>50000</SLA>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="Sensitive Information Exposure" id="67c63aef-e90a-4586-b5c6-6860b05c6316" name="Sensitive Information Exposure">
+                   <con:configuration>
+                       <AssertionSpecificExposureList>~(?s).*Runtime (E|e)rror\s.*###Can give hacker information about the project</AssertionSpecificExposureList>
+                       <IncludeProjectSpecific>true</IncludeProjectSpecific>
+                       <IncludeGlobal>true</IncludeGlobal>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="Simple Contains" id="b8f1648a-7820-402d-aa95-908ccfb61637" name="Contains">
+                   <con:configuration>
+                       <token>"userId": 1</token>
+                       <ignoreCase>false</ignoreCase>
+                       <useRegEx>false</useRegEx>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="JsonPath Count" id="3ed01186-0de6-4720-ba16-be23382751c0" name="JsonPath Count">
+                   <con:configuration>
+                       <path>$[*]</path>
+                       <content>100</content>
+                       <allowWildcards>false</allowWildcards>
+                       <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                       <ignoreComments>false</ignoreComments>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="JsonPath Match" id="2f835a74-2f2d-45b2-aaa2-f217834d955b" name="JsonPath Match">
+                   <con:configuration>
+                       <path>$[0].title</path>
+                       <content>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</content>
+                       <allowWildcards>false</allowWildcards>
+                       <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                       <ignoreComments>false</ignoreComments>
+                   </con:configuration>
+               </con:assertion>
+               <con:assertion type="Schema Compliance" id="b66a6ebe-220e-4382-9f8a-c2b865757386" name="Schema Compliance">
+                   <con:configuration/>
+               </con:assertion>
+               <con:assertion type="Valid HTTP Status Codes" id="ab4768a6-c9bd-4127-aa25-db5d129f3430" name="Valid HTTP Status Codes">
+                   <con:configuration>
+                       <codes>200</codes>
+                   </con:configuration>
+               </con:assertion>
+               <con:credentials>
+                   <con:authType>No Authorization</con:authType>
+               </con:credentials>
+               <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+               <con:jmsPropertyConfig/>
+               <con:parameters/>
+           </con:restRequest>
+       </con:config>
+   </con:testStep>
+   <con:testStep type="groovy" name="GS_Posts" id="6b1df948-0c4d-4ee8-9296-6d5e6fa812ff">
+       <con:settings/>
+       <con:config>
+           <script>def expected_response = "eum et est occaecati"
+
+def request = testRunner.testCase.getTestStepByName('Request_1')
+
+def responseAsString = request.getProperty("Response").value
+
+def jsonResponse = new groovy.json.JsonSlurper().parseText(responseAsString)
+
+log.info(jsonResponse.title[3])
+
+assert jsonResponse.title[3] == expected_response</script>
+       </con:config>
+   </con:testStep>
+   <con:properties/>
+</con:testCase>
+<con:properties/>
+</con:testSuite>
+<con:properties/>
+<con:wssContainer/>
+<con:oAuth2ProfileContainer/>
+<con:oAuth1ProfileContainer/>
+<con:sensitiveInformation/>
+</con:soapui-project>
